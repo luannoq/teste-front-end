@@ -1,0 +1,51 @@
+// ===========================
+// Fontes
+// ===========================
+$font-main: 'Poppins', sans-serif;
+
+// ===========================
+// Cores principais
+// ===========================
+$azul:          #3019B2;
+$roxo-escuro:   #271C47;
+$amarelo:       #F7CA11;
+$branco:        #FFFFFF;
+$preto:         #222222;
+
+// ===========================
+// Cores de apoio
+// ===========================
+$cinza-texto:   #676767;
+$cinza-claro:   #F4F4F4;
+$cinza-borda:   #B1B1B1;
+$cinza-secao:   #DEDEDE;
+$cinza-search:  #F6F5F2;
+
+// ===========================
+// Dimensões
+// ===========================
+$container-width: 1280px;
+
+// ===========================
+// Mixins
+// ===========================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Responsividade
+@mixin mobile {
+  @media (max-width: 768px) { @content; }
+}
+
+@mixin tablet {
+  @media (max-width: 1024px) { @content; }
+}
