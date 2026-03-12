@@ -1,0 +1,106 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: $cinza-claro;
+
+  &__inner {
+    display: flex;
+    gap: 80px;
+    padding: 48px 40px;
+  }
+
+  // Brand
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 200px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__logo-e {
+    background: $amarelo;
+    color: $roxo-escuro;
+    font-weight: 800;
+    font-size: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    @include flex-center;
+  }
+
+  &__logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: $roxo-escuro;
+  }
+
+  &__description {
+    font-size: 13px;
+    color: $cinza-texto;
+    line-height: 1.5;
+    max-width: 200px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__social-link {
+    font-size: 18px;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 0.7; }
+  }
+
+  // Links
+  &__links {
+    display: flex;
+    gap: 60px;
+    flex: 1;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__col-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: $preto;
+  }
+
+  &__col-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      font-size: 13px;
+      color: $cinza-texto;
+      transition: color 0.2s;
+
+      &:hover { color: $azul; }
+    }
+  }
+
+  // Bottom
+  &__bottom {
+    border-top: 1px solid $cinza-secao;
+    padding: 16px 40px;
+
+    p {
+      font-size: 12px;
+      color: $cinza-texto;
+      text-align: center;
+    }
+  }
+}

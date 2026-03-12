@@ -1,0 +1,137 @@
+@use '../../styles/variables' as *;
+
+.header {
+  width: 100%;
+  background: $branco;
+
+  // ── Topbar ──────────────────────────
+  &__topbar {
+    background: $branco;
+    border-bottom: 1px solid $cinza-secao;
+    padding: 8px 0;
+    font-size: 12px;
+    color: $cinza-texto;
+  }
+
+  &__topbar-inner {
+    @include flex-between;
+  }
+
+  // ── Main (logo + search + icons) ────
+  &__main {
+    padding: 16px 0;
+    border-bottom: 1px solid $cinza-secao;
+  }
+
+  &__main-inner {
+    @include flex-between;
+    gap: 24px;
+  }
+
+  // Logo
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+  }
+
+  &__logo-circle {
+    background: $amarelo;
+    color: $roxo-escuro;
+    font-weight: 700;
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    @include flex-center;
+  }
+
+  &__logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: $roxo-escuro;
+  }
+
+  // Search
+  &__search {
+    flex: 1;
+    max-width: 630px;
+    height: 48px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    background: $cinza-search;
+    border: 1px solid $cinza-secao;
+  }
+
+  &__search-input {
+    flex: 1;
+    padding: 0 16px;
+    border: none;
+    background: transparent;
+    font-family: $font-main;
+    font-size: 14px;
+    color: $preto;
+    outline: none;
+
+    &::placeholder {
+      color: $cinza-texto;
+    }
+  }
+
+  &__search-btn {
+    padding: 0 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  // Icons
+  &__icons {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+
+  &__icon-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: $preto;
+
+    &:hover {
+      color: $azul;
+    }
+  }
+
+  // ── Nav ─────────────────────────────
+  &__nav {
+    padding: 12px 0;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    a {
+      font-size: 13px;
+      font-weight: 500;
+      color: $cinza-texto;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        color: $azul;
+      }
+    }
+
+    &--active {
+      color: $azul !important;
+      font-weight: 700 !important;
+    }
+  }
+}

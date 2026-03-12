@@ -1,0 +1,55 @@
+@use '../../styles/variables' as *;
+
+.partner-banner {
+  padding: 24px 0;
+
+  &__grid {
+    display: flex;
+    gap: 13px;
+  }
+
+  &__item {
+    flex: 1;
+    height: 350px;
+    border-radius: 8px;
+    background: #2a1f1f;
+    display: flex;
+    align-items: flex-end;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: $branco;
+  }
+
+  &__description {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 180px;
+  }
+
+  &__btn {
+    display: inline-block;
+    background: $amarelo;
+    color: $roxo-escuro;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-top: 4px;
+
+    &:hover { opacity: 0.9; }
+  }
+}

@@ -1,0 +1,53 @@
+@use '../../styles/variables' as *;
+
+.banner {
+  width: 100%;
+  height: 390px;
+  background-image: url('...');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $branco;
+    max-width: 400px;
+    line-height: 1.3;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    color: $branco;
+
+    strong {
+      color: $amarelo;
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    background: $amarelo;
+    color: $roxo-escuro;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 32px;
+    border-radius: 4px;
+    width: fit-content;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

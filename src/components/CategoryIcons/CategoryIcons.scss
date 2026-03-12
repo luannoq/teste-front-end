@@ -1,0 +1,57 @@
+@use '../../styles/variables' as *;
+@use 'sass:color';
+@use '../../styles/variables' as *;
+
+.category-icons {
+  padding: 32px 0;
+  background: $branco;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    &:hover &__label {
+      color: $azul;
+    }
+  }
+
+  &__box {
+    width: 88px;
+    height: 88px;
+    background: color.adjust($cinza-claro, $lightness: -5%);
+    border-radius: 8px;
+    @include flex-center;
+    font-size: 32px;
+    transition: background 0.2s;
+
+    &:hover {
+      background: darken($cinza-claro, 5%);
+    }
+  }
+
+  &__label {
+    font-size: 13px;
+    font-weight: 500;
+    color: $cinza-texto;
+    text-align: center;
+  }
+
+  &__item--active &__label {
+    color: $azul;
+    font-weight: 700;
+  }
+
+  &__item--active &__box {
+    border: 2px solid $azul;
+  }
+}

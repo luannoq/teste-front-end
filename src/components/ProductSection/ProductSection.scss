@@ -1,0 +1,99 @@
+@use '../../styles/variables' as *;
+
+.product-section {
+  padding: 48px 0;
+  background: $branco;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+    gap: 4px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $azul;
+    text-align: center;
+  }
+
+  &__ver-todos {
+    font-size: 13px;
+    color: $cinza-texto;
+
+    &:hover { color: $azul; }
+  }
+
+  // Abas
+  &__tabs {
+    display: flex;
+    border: 1px solid $cinza-secao;
+    margin-bottom: 24px;
+  }
+
+  &__tab {
+    flex: 1;
+    padding: 12px 8px;
+    background: $branco;
+    border: none;
+    border-right: 1px solid $cinza-secao;
+    font-family: $font-main;
+    font-size: 13px;
+    font-weight: 600;
+    color: $cinza-texto;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:last-child { border-right: none; }
+    &:hover { color: $azul; }
+
+    &--active {
+      color: $azul;
+      font-weight: 700;
+    }
+  }
+
+  // Carrossel
+  &__carousel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  //Cards
+  &__cards {
+    display: flex;
+    gap: 16px;
+    flex: 1;
+    overflow: hidden;
+    scroll-behavior: smooth; // Para rolagem suave ao clicar nas setas
+  }
+
+  // Setas
+  &__arrow {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid $cinza-borda;
+    background: $branco;
+    font-size: 24px;
+    cursor: pointer;
+    @include flex-center;
+    flex-shrink: 0;
+    color: $preto;
+    transition: all 0.2s;
+
+    &:hover:not(:disabled) {
+      border-color: $azul;
+      color: $azul;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+}

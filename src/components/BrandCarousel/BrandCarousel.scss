@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+
+.brand-carousel {
+  padding: 48px 0;
+  background: $branco;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $azul;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: block;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid $cinza-secao;
+    background: $branco;
+    @include flex-center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  &__logo {
+    font-size: 16px;
+    font-weight: 700;
+    color: $roxo-escuro;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__logo-e {
+    background: $amarelo;
+    color: $roxo-escuro;
+    font-weight: 800;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    @include flex-center;
+    font-size: 13px;
+  }
+}
