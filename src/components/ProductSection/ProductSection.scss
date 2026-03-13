@@ -29,32 +29,42 @@
 
   // Abas
   &__tabs {
-    display: flex;
-    border: 1px solid $cinza-secao;
-    margin-bottom: 24px;
-  }
+  display: flex;
+  border: 1px solid #BDBDBD;
+  margin-bottom: 24px;
 
-  &__tab {
+  li {
     flex: 1;
-    padding: 12px 8px;
+    border-right: 1px solid #BDBDBD;
+    text-align: center;
+    
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+ &__tab {
+    flex: 1;
+    padding: 8px 8px;
     background: $branco;
     border: none;
-    border-right: 1px solid $cinza-secao;
+    border-right: 1px solid $cinza-secao; 
     font-family: $font-main;
     font-size: 13px;
-    font-weight: 600;
+     font-weight: 600;
     color: $cinza-texto;
     cursor: pointer;
-    transition: all 0.2s;
+     transition: all 0.2s;
 
     &:last-child { border-right: none; }
     &:hover { color: $azul; }
 
-    &--active {
-      color: $azul;
-      font-weight: 700;
-    }
+ &--active {
+    color: #3442B5;
+    font-weight: 700;
   }
+}
 
   // Carrossel
   &__carousel {

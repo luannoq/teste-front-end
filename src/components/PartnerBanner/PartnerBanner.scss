@@ -11,8 +11,8 @@
   &__item {
     flex: 1;
     height: 350px;
-    border-radius: 8px;
-    background: #2a1f1f;
+    border-radius: 14px;
+    background-image: url('/assets/BannerParceiros.png');
     display: flex;
     align-items: flex-end;
     padding: 32px;
@@ -28,22 +28,24 @@
   }
 
   &__title {
-    font-size: 28px;
+    font-size: 40px;
     font-weight: 700;
     color: $branco;
   }
 
   &__description {
-    font-size: 13px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
     max-width: 180px;
+    font-family: poppins, regular , sans serif;
   }
 
   &__btn {
     display: inline-block;
     background: $amarelo;
     color: $roxo-escuro;
-    font-size: 13px;
+    font-family: poppins, bold, sans-serif;
+    font-size: 16px;
     font-weight: 700;
     padding: 10px 24px;
     border-radius: 4px;

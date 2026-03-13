@@ -5,22 +5,29 @@
 
   &__inner {
     display: flex;
-    gap: 80px;
-    padding: 48px 40px;
+    gap: 90px;
+    padding: 60px 40px;
+    margin-top: 42px;
+    margin-bottom: 42px;
   }
 
-  // Brand
+  // Coluna da esquerda (Logo e Redes)
   &__brand {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    min-width: 200px;
+    gap: 24px;
+    min-width: 250px;
+
+    // Linha divisória vertical (layout Figma)
+    padding-right: 80px;
+    border-right: 1px solid $cinza-secao;
   }
 
   &__logo {
-    display: flex;
-    align-items: center;
-    gap: 2px;
+    img {
+      width: 164px;
+      height: 48px;
+    }
   }
 
   &__logo-e {
@@ -41,50 +48,59 @@
   }
 
   &__description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
     font-size: 13px;
     color: $cinza-texto;
     line-height: 1.5;
-    max-width: 200px;
+    max-width: 350px;
   }
 
   &__social {
     display: flex;
-    gap: 12px;
+    gap: 24px;
   }
 
   &__social-link {
-    font-size: 18px;
-    transition: opacity 0.2s;
+    img {
+      width: 20px;
+      height: 20px;
+    }
 
-    &:hover { opacity: 0.7; }
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
-  // Links
+  // Colunas da direita (Links)
   &__links {
     display: flex;
-    gap: 60px;
     flex: 1;
+    justify-content: space-between; // Distribui as colunas igualmente
   }
 
   &__col {
     display: flex;
     flex-direction: column;
-    gap: 12px;
   }
 
   &__col-title {
-    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    font-size: 16px;
     color: $preto;
+    margin-bottom: 24px;
   }
 
   &__col-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
 
     a {
-      font-size: 13px;
+      font-family: 'Work Sans', sans-serif; // Fonte específica para os itens da lista
+      font-weight: 400;
+      font-size: 14px;
       color: $cinza-texto;
       transition: color 0.2s;
 
@@ -92,13 +108,14 @@
     }
   }
 
-  // Bottom
+  // Faixa inferior
   &__bottom {
-    border-top: 1px solid $cinza-secao;
-    padding: 16px 40px;
+    padding: 14px 40px;
 
     p {
-      font-size: 12px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
       color: $cinza-texto;
       text-align: center;
     }

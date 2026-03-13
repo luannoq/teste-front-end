@@ -7,35 +7,56 @@ const Header = () => {
       {/* Topbar */}
       <div className="header__topbar">
         <div className="container header__topbar-inner">
-          <span>🛡️ Compra <strong>100% segura</strong></span>
-          <span>🚚 <strong>Frete grátis</strong> acima de R$ 200</span>
-          <span>💳 <strong>Parcele</strong> suas compras</span>
+          <span className="header__topbar-item">
+            <img src="/assets/icons/ShieldCheck.svg" alt="" />
+            Compra <strong>100% segura</strong>
+          </span>
+          <span className="header__topbar-item">
+            <img src="/assets/icons/Truck.svg" alt="" />
+            <strong>Frete grátis</strong> acima de R$ 200
+          </span>
+          <span className="header__topbar-item">
+            <img src="/assets/icons/CreditCard.svg" alt="" />
+            <strong>Parcele</strong> suas compras
+          </span>
         </div>
       </div>
 
-      {/* Logo + Search + Ícones */}
+      {/* Main */}
       <div className="header__main">
         <div className="container header__main-inner">
 
+          {/* Logo */}
           <a href="/" className="header__logo">
-            <span className="header__logo-circle">e</span>
-            <span className="header__logo-text">converse</span>
+            <img src="/assets/Logo Econverse.svg" alt="Econverse" />
           </a>
 
+          {/* Search */}
           <div className="header__search">
             <input
               type="text"
               placeholder="O que você está buscando?"
               className="header__search-input"
             />
-            <button className="header__search-btn">🔍</button>
+            <button className="header__search-btn">
+              <img src="/assets/icons/SearchIcon.svg" alt="Buscar" />
+            </button>
           </div>
 
+          {/* Ícones */}
           <div className="header__icons">
-            <button className="header__icon-btn">🏪</button>
-            <button className="header__icon-btn">♡</button>
-            <button className="header__icon-btn">👤</button>
-            <button className="header__icon-btn">🛒</button>
+            <a href="#" className="header__icon-link">
+              <img src="/assets/icons/GroupBox.svg" alt="Categorias" />
+            </a>
+            <a href="#" className="header__icon-link">
+              <img src="/assets/icons/Heart.svg" alt="Favoritos" />
+            </a>
+            <a href="#" className="header__icon-link">
+              <img src="/assets/icons/UserCircle.svg" alt="Usuário" />
+            </a>
+            <a href="#" className="header__icon-link">
+              <img src="/assets/icons/ShoppingCart.svg" alt="Carrinho" />
+            </a>
           </div>
 
         </div>
@@ -43,16 +64,17 @@ const Header = () => {
 
       {/* Nav */}
       <nav className="header__nav">
-        <div className="container">
-          <ul className="header__nav-list">
-            <li><a href="#">TODAS CATEGORIAS</a></li>
-            <li><a href="#">SUPERMERCADO</a></li>
-            <li><a href="#">LIVROS</a></li>
-            <li><a href="#">MODA</a></li>
-            <li><a href="#">LANÇAMENTOS</a></li>
-            <li><a href="#" className="header__nav-list--active">OFERTAS DO DIA</a></li>
-            <li><a href="#">ASSINATURA</a></li>
-          </ul>
+        <div className="container header__nav-inner">
+          <a href="#" className="header__nav-link">TODAS CATEGORIAS</a>
+          <a href="#" className="header__nav-link">SUPERMERCADO</a>
+          <a href="#" className="header__nav-link">LIVROS</a>
+          <a href="#" className="header__nav-link">MODA</a>
+          <a href="#" className="header__nav-link">LANÇAMENTOS</a>
+          <a href="#" className="header__nav-link header__nav-link--active">OFERTAS DO DIA</a>
+          <a href="#" className="header__nav-link">
+            <img src="/assets/icons/CrownSimpleSignature.svg" alt="" />
+            ASSINATURA
+          </a>
         </div>
       </nav>
 

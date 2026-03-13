@@ -1,13 +1,12 @@
 import './CategoryIcons.scss'
-
 const categories = [
-  { label: 'Tecnologia', active: true },
-  { label: 'Supermercado', active: false },
-  { label: 'Bebidas', active: false },
-  { label: 'Ferramentas', active: false },
-  { label: 'Saúde', active: false },
-  { label: 'Esportes e Fitness', active: false },
-  { label: 'Moda', active: false },
+  { label: 'Tecnologia', icon: '/assets/icons/Tecnologia.svg', active: true },
+  { label: 'Supermercado', icon: '/assets/icons/Supermercado.svg', active: false },
+  { label: 'Bebidas', icon: '/assets/icons/Bebidas.svg', active: false },
+  { label: 'Ferramentas', icon: '/assets/icons/Ferramentas.svg', active: false },
+  { label: 'Saúde', icon: '/assets/icons/Saude.svg', active: false },
+  { label: 'Esportes e Fitness', icon: '/assets/icons/Esportes e fitness.svg', active: false },
+  { label: 'Moda', icon: '/assets/icons/Moda.svg', active: false },
 ]
 
 const CategoryIcons = () => {
@@ -21,7 +20,7 @@ const CategoryIcons = () => {
               className={`category-icons__item ${cat.active ? 'category-icons__item--active' : ''}`}
             >
               <div className="category-icons__box">
-                🔲
+                <img src={cat.icon} alt={cat.label} />
               </div>
               <span className="category-icons__label">{cat.label}</span>
             </li>
@@ -31,5 +30,4 @@ const CategoryIcons = () => {
     </section>
   )
 }
-
 export default CategoryIcons

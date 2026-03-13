@@ -2,7 +2,7 @@
 
 .newsletter {
   background: $roxo-escuro;
-  padding: 48px 0;
+  padding: 40px 0;
 
   &__inner {
     display: flex;
@@ -11,68 +11,82 @@
     gap: 40px;
   }
 
+  // Bloco de textos da esquerda
   &__text {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 340px;
+    // Alinhamento horizontal para a esquerda (layout Figma)
+    align-items: flex-start;
+    max-width: 460px;
   }
 
   &__title {
-    font-size: 22px;
-    font-weight: 700;
+    font-family: 'Outfit', sans-serif;
+    font-size: 32px;
+    font-weight: 600; // SemiBold no Figma
     color: $branco;
+    line-height: 120%;
+    text-align: left;
   }
 
   &__subtitle {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px; // Ajustado conforme o Figma
+    font-weight: 300; // Light no Figma
+    color: $branco;
+    line-height: 18px;
+
+    // Alinhamento para a esquerda
+    text-align: left;
+
+    // Melhora o render da fonte branca no fundo escuro
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
+  // Bloco do formulário da direita
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
   }
 
   &__inputs {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
   }
 
   &__input {
-    height: 44px;
-    padding: 0 16px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 4px;
+    width: 233px; // Medida exata do Figma
+    height: 42px; // Altura fininha do Figma
+    padding: 12px 24px;
+    border: 1px solid $cinza-borda-input; // Sua nova variável
+    border-radius: 8px; // Canto arredondado do Figma
     background: $branco;
-    font-family: $font-main;
-    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
     color: $preto;
     outline: none;
-    width: 200px;
 
     &::placeholder { color: $cinza-texto; }
 
-    &:focus {
-      border-color: $amarelo;
-    }
+    &:focus { border-color: $amarelo; }
   }
 
   &__btn {
-    height: 44px;
-    padding: 0 24px;
+    width: 157px;
+    height: 42px;
+    padding: 0;
     background: $amarelo;
     color: $roxo-escuro;
-    font-family: $font-main;
-    font-size: 13px;
-    font-weight: 700;
-    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600; // SemiBold no Figma
+    border-radius: 8px; // Arredondado igual ao input
     border: none;
     cursor: pointer;
-    white-space: nowrap;
     transition: opacity 0.2s;
 
     &:hover { opacity: 0.9; }
@@ -85,8 +99,10 @@
     cursor: pointer;
 
     span {
-      font-size: 12px;
-      color: rgba(255, 255, 255, 0.7);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300; // Light no Figma
+      font-size: 13px;
+      color: $branco;
     }
 
     input[type='checkbox'] {

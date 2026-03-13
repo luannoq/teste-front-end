@@ -4,7 +4,7 @@
   width: 304px;
   min-height: 500px;
   background: $branco;
-  border: 1px solid $cinza-borda;
+  border: 1px solid #EBEBEB;
   border-radius: 4px;
   cursor: pointer;
   display: flex;
@@ -14,6 +14,7 @@
   &:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   }
+
 
   // Imagem
   &__image-wrapper {

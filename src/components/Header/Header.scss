@@ -7,26 +7,56 @@
   // ── Topbar ──────────────────────────
   &__topbar {
     background: $branco;
-    border-bottom: 1px solid $cinza-secao;
     padding: 8px 0;
     font-size: 12px;
     color: $cinza-texto;
+    
+    
   }
 
   &__topbar-inner {
-    @include flex-between;
+  @include flex-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+  height: 40px;
+}
+
+
+&__topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: $cinza-medio;
+
+  img {
+    width: 18px;
+    height: 18px;
   }
+
+  strong {
+    color: #3019B2;
+  }
+}
 
   // ── Main (logo + search + icons) ────
   &__main {
     padding: 16px 0;
-    border-bottom: 1px solid $cinza-secao;
   }
 
   &__main-inner {
-    @include flex-between;
-    gap: 24px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 1280px; // VALOR DO FIGMA
+  margin: 0 auto;    // Centraliza o bloco na tela
+  padding: 0 40px;   // Respiro interno lateral
+
+}
 
   // Logo
   &__logo {
@@ -62,7 +92,7 @@
     border-radius: 10px;
     overflow: hidden;
     background: $cinza-search;
-    border: 1px solid $cinza-secao;
+    
   }
 
   &__search-input {
@@ -76,7 +106,7 @@
     outline: none;
 
     &::placeholder {
-      color: $cinza-texto;
+      color: $cinza-medio;
     }
   }
 
@@ -107,31 +137,41 @@
     }
   }
 
-  // ── Nav ─────────────────────────────
-  &__nav {
-    padding: 12px 0;
+  // Nav
+&__nav {
+  border-bottom: 1px solid $cinza-secao;
+}
+
+&__nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;  
+  height: 48px;
+  white-space: nowrap;
+}
+
+&__nav-link {
+  font-size: 12px;
+  font-weight: 500;
+  color: $cinza-medio;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap; //  cada link em uma linha
+
+  &:hover { color: $azul; }
+
+  &--active {
+    color: #3019B2;
+    font-weight: 700;
   }
 
-  &__nav-list {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-
-    a {
-      font-size: 13px;
-      font-weight: 500;
-      color: $cinza-texto;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &:hover {
-        color: $azul;
-      }
-    }
-
-    &--active {
-      color: $azul !important;
-      font-weight: 700 !important;
-    }
+  img {
+    width: 16px;
+    height: 16px;
   }
+}
 }

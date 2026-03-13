@@ -22,7 +22,10 @@ function App() {
       <CategoryIcons />
       <ProductSection onProductClick={setSelectedProduct} />
       <PartnerBanner />
+      <ProductSection onProductClick={setSelectedProduct} title="Produtos relacionados" showVerTodos />
+      <PartnerBanner />
       <BrandCarousel />
+      <ProductSection onProductClick={setSelectedProduct} title="Produtos relacionados" showVerTodos />
       <Newsletter />
       <Footer />
 

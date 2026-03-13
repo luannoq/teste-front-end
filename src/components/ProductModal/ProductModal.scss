@@ -5,19 +5,18 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  @include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal {
   background: $branco;
-  border-radius: 8px;
-  width: 800px;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow-y: auto;
+  border-radius: 4px;
+  width: 770px;
   display: flex;
-  gap: 32px;
-  padding: 40px;
+  gap: 50px;
+  padding: 50px;
   position: relative;
 
   &__close {
@@ -26,134 +25,110 @@
     right: 16px;
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
-    color: $cinza-texto;
-    line-height: 1;
-
-    &:hover { color: $preto; }
+    color: #707070;
   }
 
   &__image-wrapper {
-    width: 280px;
+    width: 250px;
     flex-shrink: 0;
-    @include flex-center;
-  }
-
-  &__image {
-    width: 100%;
-    object-fit: contain;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 12px;
     flex: 1;
   }
 
   &__name {
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
-    font-weight: 700;
-    color: $preto;
-  }
-
-  &__description {
-    font-size: 14px;
-    color: $cinza-texto;
-    line-height: 1.5;
-  }
-
-  // Preços
-  &__pricing {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    padding: 16px 0;
-    border-top: 1px solid $cinza-secao;
-    border-bottom: 1px solid $cinza-secao;
-  }
-
-  &__old-price {
-    font-size: 13px;
-    color: $cinza-texto;
-    text-decoration: line-through;
+    font-weight: 600;
+    color: #2D2D2D;
+    text-transform: uppercase;
+    margin-bottom: 15px;
   }
 
   &__price {
-    font-size: 28px;
-    font-weight: 700;
-    color: $preto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600; // SemiBold
+    color: #2D2D2D;
+    margin-bottom: 15px;
   }
 
-  &__installment {
-    font-size: 13px;
-    color: $cinza-texto;
+  &__description {
+    font-family: 'Work Sans', sans-serif; // Mudança de fonte aqui
+    font-size: 10px;
+    font-weight: 500; // Medium
+    color: $cinza-borda;
+    line-height: 150.5%;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    max-width: 290px;
   }
 
-  &__shipping {
-    font-size: 13px;
+  &__link {
+    font-family: 'Work Sans', sans-serif; // Mudança de fonte aqui
+    font-size: 11px;
+    font-weight: 600; // SemiBold
     color: $azul;
-    font-weight: 500;
-    margin-top: 4px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 25px;
   }
 
-  // Quantidade
-  &__quantity {
+  // Container para alinhar quantidade e botão lado a lado
+  &__footer {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-top: 8px;
-  }
-
-  &__quantity-label {
-    font-size: 14px;
-    font-weight: 600;
-    color: $preto;
+    gap: 15px;
+    margin-top: auto;
   }
 
   &__quantity-controls {
     display: flex;
     align-items: center;
-    border: 1px solid $cinza-borda;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-
-  &__quantity-btn {
-    width: 36px;
+    justify-content: space-around;
+    width: 110px;
     height: 36px;
-    background: $cinza-claro;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-    @include flex-center;
-    transition: background 0.2s;
-
-    &:hover { background: darken($cinza-claro, 5%); }
-  }
-
-  &__quantity-value {
-    width: 48px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
-  }
-
-  &__btn {
-    width: 100%;
-    height: 48px;
-    background: $azul;
-    color: $branco;
-    font-family: $font-main;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    background: #FFFFFF;
+    border: none; // REMOVE A BORDA
     border-radius: 4px;
+
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+
+    button {
+      background: none;
+      border: none;
+      color: #041E50;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 0 10px;
+    }
+
+    span {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: #041E50;
+    }
+  }
+
+  &__btn-buy {
+    width: 188px;
+    height: 36px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background: $amarelo; // Sua variável amarela
+    color: #041E50;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
     border: none;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: auto;
-    transition: opacity 0.2s;
+    text-transform: uppercase;
 
     &:hover { opacity: 0.9; }
   }

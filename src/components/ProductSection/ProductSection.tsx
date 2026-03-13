@@ -14,18 +14,13 @@ interface ProductSectionProps {
 const ProductSection = ({ onProductClick, title = 'Produtos relacionados', showVerTodos = false }: ProductSectionProps) => {
   const [activeCategory, setActiveCategory] = useState<Category>('CELULAR')
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [expanded, setExpanded] = useState(false)
 
   const products = productsData.products as Product[]
   const visibleCount = 4
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 1))
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => Math.min(products.length - visibleCount, prev + 1))
-  }
-
+  const handlePrev = () => setCurrentIndex(prev => Math.max(0, prev - 1))
+  const handleNext = () => setCurrentIndex(prev => Math.min(products.length - visibleCount, prev + 1))
   const visibleProducts = products.slice(currentIndex, currentIndex + visibleCount)
 
   return (
@@ -36,12 +31,17 @@ const ProductSection = ({ onProductClick, title = 'Produtos relacionados', showV
         <div className="product-section__header">
           <h2 className="product-section__title">{title}</h2>
           {showVerTodos && (
-            <a href="#" className="product-section__ver-todos">Ver todos</a>
+            <button
+              className="product-section__ver-todos"
+              onClick={() => setExpanded(e => !e)}
+            >
+              {expanded ? 'Ver menos' : 'Ver todos'}
+            </button>
           )}
         </div>
 
-        {/* Abas */}
-        {!showVerTodos && (
+        {/* Tabs — accordion só nos que têm showVerTodos */}
+        {(!showVerTodos || expanded) && (
           <ul className="product-section__tabs">
             {CATEGORIES.map((cat) => (
               <li key={cat}>
@@ -56,7 +56,7 @@ const ProductSection = ({ onProductClick, title = 'Produtos relacionados', showV
           </ul>
         )}
 
-        {/* Carrossel */}
+        {/* Cards — SEMPRE visíveis */}
         <div className="product-section__carousel">
           <button
             className="product-section__arrow product-section__arrow--left"

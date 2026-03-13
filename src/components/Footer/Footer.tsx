@@ -8,22 +8,26 @@ const Footer = () => {
         {/* Logo + descrição + redes sociais */}
         <div className="footer__brand">
           <a href="/" className="footer__logo">
-            <span className="footer__logo-e">e</span>
-            <span className="footer__logo-text">converse</span>
+            <img src="/assets/Logo Econverse.svg" alt="Econverse" />
           </a>
           <p className="footer__description">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <div className="footer__social">
-            <a href="#" className="footer__social-link">📷</a>
-            <a href="#" className="footer__social-link">👥</a>
-            <a href="#" className="footer__social-link">💼</a>
+            <a href="#" className="footer__social-link">
+              <img src="/assets/icons/Instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" className="footer__social-link">
+              <img src="/assets/icons/Facebook.svg" alt="Facebook" />
+            </a>
+            <a href="#" className="footer__social-link">
+              <img src="/assets/icons/Linkedin.svg" alt="LinkedIn" />
+            </a>
           </div>
         </div>
 
         {/* Links */}
         <div className="footer__links">
-
           <div className="footer__col">
             <h4 className="footer__col-title">Institucional</h4>
             <ul className="footer__col-list">
@@ -50,8 +54,8 @@ const Footer = () => {
               <li><a href="#">Troca e Devolução</a></li>
             </ul>
           </div>
-
         </div>
+
       </div>
 
       {/* Bottom */}
